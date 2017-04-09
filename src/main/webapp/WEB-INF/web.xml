@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.2//EN" "http://java.sun.com/j2ee/dtds/web-app_2_2.dtd">
+<web-app id="WebApp_ID">
+	<display-name>check-system</display-name>
+	<servlet>
+		<servlet-name>PostStuLogin</servlet-name>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<description>This is the description of my J2EE component</description>
+		<servlet-class>com.zefeng.checksystem.servlet.PostStuLogin</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetStuInfo</servlet-name>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<description>This is the description of my J2EE component</description>
+		<servlet-class>com.zefeng.checksystem.servlet.GetStuInfo</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetStulogin</servlet-name>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<description>This is the description of my J2EE component</description>
+		<servlet-class>com.zefeng.checksystem.servlet.GetStulogin</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetTdInfo</servlet-name>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<description>This is the description of my J2EE component</description>
+		<servlet-class>com.zefeng.checksystem.servlet.GetTdInfo</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetTdIntroduce</servlet-name>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<description>This is the description of my J2EE component</description>
+		<servlet-class>com.zefeng.checksystem.servlet.GetTdIntroduce</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>postSaveTdInfo</servlet-name>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<description>This is the description of my J2EE component</description>
+		<servlet-class>com.zefeng.checksystem.servlet.postSaveTdInfo</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetPostList</servlet-name>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<description>This is the description of my J2EE component</description>
+		<servlet-class>com.zefeng.checksystem.servlet.GetPostList</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>PostDelTd</servlet-name>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<description>This is the description of my J2EE component</description>
+		<servlet-class>com.zefeng.checksystem.servlet.PostDelTd</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>PostNewPost</servlet-name>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<description>This is the description of my J2EE component</description>
+		<servlet-class>com.zefeng.checksystem.servlet.PostNewPost</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>PostDelPost</servlet-name>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<description>This is the description of my J2EE component</description>
+		<servlet-class>com.zefeng.checksystem.servlet.PostDelPost</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetDataShow</servlet-name>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<description>This is the description of my J2EE component</description>
+		<servlet-class>com.zefeng.checksystem.servlet.GetDataShow</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetIndex</servlet-name>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<description>This is the description of my J2EE component</description>
+		<servlet-class>com.zefeng.checksystem.servlet.GetIndex</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>LinkPostList</servlet-name>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<description>This is the description of my J2EE component</description>
+		<servlet-class>com.zefeng.checksystem.servlet.LinkPostList</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>PostAdminLogin</servlet-name>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<description>This is the description of my J2EE component</description>
+		<servlet-class>com.zefeng.checksystem.servlet.PostAdminLogin</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetOutLogin</servlet-name>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<description>This is the description of my J2EE component</description>
+		<servlet-class>com.zefeng.checksystem.servlet.GetOutLogin</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetAdminInfo</servlet-name>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<description>This is the description of my J2EE component</description>
+		<servlet-class>com.zefeng.checksystem.servlet.GetAdminInfo</servlet-class>
+	</servlet>
+  <servlet>
+    <servlet-name>PostselectInfo</servlet-name>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <description>This is the description of my J2EE component</description>
+    <servlet-class>com.zefeng.checksystem.servlet.PostselectInfo</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>PostTdLogin</servlet-name>
+  	<display-name>PostTdLogin</display-name>
+  	<description></description>
+  	<servlet-class>com.zefeng.checksystem.servlet.PostTdLogin</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetSetting</servlet-name>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <description>This is the description of my J2EE component</description>
+    <servlet-class>com.zefeng.checksystem.servlet.GetSetting</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PostTdSeRe</servlet-name>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <description>This is the description of my J2EE component</description>
+    <servlet-class>com.zefeng.checksystem.servlet.PostTdSeRe</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PostCheckTd</servlet-name>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <description>This is the description of my J2EE component</description>
+    <servlet-class>com.zefeng.checksystem.servlet.PostCheckTd</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<servlet-mapping>
+		<servlet-name>PostStuLogin</servlet-name>
+		<url-pattern>/servlet/PostStuLogin</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetStuInfo</servlet-name>
+		<url-pattern>/servlet/GetStuInfo</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetStulogin</servlet-name>
+		<url-pattern>/servlet/GetStulogin</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetTdInfo</servlet-name>
+		<url-pattern>/servlet/GetTdInfo</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetTdIntroduce</servlet-name>
+		<url-pattern>/servlet/GetTdIntroduce</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>postSaveTdInfo</servlet-name>
+		<url-pattern>/servlet/postSaveTdInfo</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetPostList</servlet-name>
+		<url-pattern>/servlet/GetPostList</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PostDelTd</servlet-name>
+		<url-pattern>/servlet/PostDelTd</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PostNewPost</servlet-name>
+		<url-pattern>/servlet/PostNewPost</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PostDelPost</servlet-name>
+		<url-pattern>/servlet/PostDelPost</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetDataShow</servlet-name>
+		<url-pattern>/servlet/GetDataShow</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetIndex</servlet-name>
+		<url-pattern>/servlet/GetIndex</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LinkPostList</servlet-name>
+		<url-pattern>/servlet/LinkPostList</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PostAdminLogin</servlet-name>
+		<url-pattern>/servlet/PostAdminLogin</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetOutLogin</servlet-name>
+		<url-pattern>/servlet/GetOutLogin</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetAdminInfo</servlet-name>
+		<url-pattern>/servlet/GetAdminInfo</url-pattern>
+	</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PostselectInfo</servlet-name>
+    <url-pattern>/servlet/PostselectInfo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>PostTdLogin</servlet-name>
+  	<url-pattern>/servlet/PostTdLogin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetSetting</servlet-name>
+    <url-pattern>/servlet/GetSetting</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PostTdSeRe</servlet-name>
+    <url-pattern>/servlet/PostTdSeRe</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PostCheckTd</servlet-name>
+    <url-pattern>/servlet/PostCheckTd</url-pattern>
+  </servlet-mapping>
+
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+</web-app>

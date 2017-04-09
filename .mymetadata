@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="check-system"
+  id="myeclipse.1483085666029"
+  context-root="/check-system"
+  j2ee-spec="1.7"
+  archive="check-system.war">
+  <attributes>
+    <attribute name="webrootdir" value="src/main/webapp" />
+  </attributes>
+</project-module>
+

@@ -51,12 +51,13 @@ public class PostStuLogin extends HttpServlet {
 		String stubanji = request.getParameter("stu_banji");
 		String stuname = request.getParameter("stu_name");
 		String  stuno =request.getParameter("stu_no");
+		String  education = request.getParameter("stu_education");
 		if(stuschool==null){
 			 stuxibu = "外校";
 			 stubanji = "外校";
 			 stuno ="000000000";
 		}
-		StuUser user = new StuUser(stuschoolname, stuxibu, stubanji,stuname,stuno);
+		StuUser user = new StuUser(stuschoolname, stuxibu, stubanji,stuname,stuno,education);
 		if(StuJdbc.insertUser(user)){
 			 request.getRequestDispatcher("/view/success.jsp").forward(request,response);
 			 PrintConsole.Print("保存学生信息成功");

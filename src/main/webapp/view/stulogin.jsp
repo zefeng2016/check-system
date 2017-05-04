@@ -58,6 +58,12 @@
 				showerror("姓名不能为空");
 				return false;
 			}
+			if (form.stu_education.value == '') {
+				$("#education").addClass('weui_cell_warn');
+				$("#education").find('input').focus();
+				showerror("学历不能为空");
+				return false;
+			}
 			if (form.stu_no.value == '') {
 				$("#stuno").addClass('weui_cell_warn');
 				$("#stuno").find('input').focus();
@@ -158,6 +164,18 @@ body, html {
 						<div class="weui_cell_bd weui_cell_primary">
 							<input class="weui_input" type="text" name="stu_name"
 								placeholder="请输入姓名">
+						</div>
+						<div class="weui_cell_ft">
+							<i class="weui_icon_warn"></i>
+						</div>
+					</div>
+						<div id="education" class="weui_cell">
+						<div class="weui_cell_hd">
+							<label class="weui_label">学历</label>
+						</div>
+						<div class="weui_cell_bd weui_cell_primary">
+							<input class="weui_input" type="text" name="stu_education"
+								placeholder="中专、大专、本科...">
 						</div>
 						<div class="weui_cell_ft">
 							<i class="weui_icon_warn"></i>

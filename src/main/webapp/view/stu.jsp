@@ -56,6 +56,7 @@
 											<th>系部</th>
 											<th>班级</th>
 											<th>姓名</th>
+											<th>学历</th>
 											<!-- 	<th>签到状态</th> -->
 										</tr>
 									</thead>
@@ -69,6 +70,7 @@
 												<td class="2">${user.stuxibu }</td>
 												<td class="3">${user.stubanji }</td>
 												<td class="center 4">${user.stuname }</td>
+												<td class ="center 5" >${user.education}</td>
 												<!-- 	<td class="center 5">已签到</td> -->
 											</tr>
 										</c:forEach>

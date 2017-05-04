@@ -8,19 +8,21 @@ public class StuUser {
 	private String stubanji;
 	private String stuname;
 	private String stuno;
+	private String education;
 
 	public StuUser() {
 		super();
 	}
 
 	public StuUser(String stuschool, String stuxibu, String stubanji,
-			String stuname, String stuno) {
+			String stuname, String stuno,String education) {
 		super();
 		this.stuschool = stuschool;
 		this.stuxibu = stuxibu;
 		this.stubanji = stubanji;
 		this.stuname = stuname;
 		this.stuno = stuno;
+		this.education = education;
 	}
 
 	public StuUser(Integer id, String stuschool, String stuxibu,
@@ -32,6 +34,7 @@ public class StuUser {
 		this.stubanji = stubanji;
 		this.stuname = stuname;
 		this.stuno = stuno;
+		this.education = education;
 	}
 
 	public Integer getId() {
@@ -81,12 +84,21 @@ public class StuUser {
 	public void setStuschool(String stuschool) {
 		this.stuschool = stuschool;
 	}
+	
+
+	public String getEducation() {
+		return education;
+	}
+
+	public void setEducation(String education) {
+		this.education = education;
+	}
 
 	@Override
 	public String toString() {
 		return "StuUser [id=" + id + ", stuschool=" + stuschool + ", stuxibu="
 				+ stuxibu + ", stubanji=" + stubanji + ", stuname=" + stuname
-				+ ", stuno=" + stuno + "]";
+				+ ", stuno=" + stuno +"education"+education+"]";
 	}
 
 }

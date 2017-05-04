@@ -9,6 +9,7 @@
         <result property="stubanji" column="stubanji" javaType="java.lang.String"></result>
         <result property="stuname" column="stuname" javaType="java.lang.String"></result>
         <result property="stuno" column="stuno" javaType="java.lang.String"></result>
+         <result property="education" column="education" javaType="java.lang.String"></result>
     </resultMap>
 <!-- 在各种标签中的id属性必须和接口中的方法名相同 ， id属性值必须是唯一的，不能够重复使用。parameterType属性指明查询时使用的参数类型，resultType属性指明查询返回的结果集类型-->    
 <!-- useGeneratedKeys：（ 仅 对 insert 有 用 ） 这 会 告 诉 MyBatis 使 用 JDBC 的getGeneratedKeys 
@@ -18,11 +19,11 @@
 
 
     <insert id="insertUser" useGeneratedKeys="true" keyProperty="id">
-        insert into stu (stuschool,stuxibu,stubanji,stuname,stuno) values (#{stuschool},#{stuxibu},#{stubanji},#{stuname},#{stuno})
+        insert into stu (stuschool,stuxibu,stubanji,stuname,stuno,education) values (#{stuschool},#{stuxibu},#{stubanji},#{stuname},#{stuno},#{education})
     </insert>
     
     <update id="updateUser" >
-      update stu set stuxibu=#{stuxibu},stubanji=#{stubanji},stuname=#{stuname},stuno=#{stuno} where id=#{id}
+      update stu set stuxibu=#{stuxibu},stubanji=#{stubanji},stuname=#{stuname},stuno=#{stuno} education=#{education} where id=#{id}
     </update>
     
     <delete id="deleteUser" parameterType="int">

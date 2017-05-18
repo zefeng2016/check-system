@@ -11,7 +11,20 @@ import javax.servlet.http.HttpServletResponse;
 import com.zefeng.checksystem.common.DepartClazzLink;
 
 public class GetStulogin extends HttpServlet {
-
+	
+	String linkjsonString =null;
+	
+	/**
+	 * 初始化系部班级数据
+	 */
+	public void init() throws ServletException{
+		DepartClazzLink link = new DepartClazzLink();
+		this.linkjsonString = link.getDepartClazzLink();
+	}
+	
+	
+	
+	
 	/**
 	 * 获取学生登录界面. <br>
 	 *
@@ -24,9 +37,8 @@ public class GetStulogin extends HttpServlet {
 	 */
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		DepartClazzLink link = new DepartClazzLink();
-		String linkjsonString = link.getDepartClazzLink();
-		if(linkjsonString!=null){
+		
+		if(this.linkjsonString!=null){
 			request.setAttribute("DcJSON",linkjsonString);
 	        request.getRequestDispatcher("/view/stulogin.jsp").forward(request,response);
 		}else {

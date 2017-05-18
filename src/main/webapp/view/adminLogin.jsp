@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
+﻿<%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <%
 	String path = request.getContextPath();
@@ -84,5 +84,7 @@ body {
 			</div>
 		</div>
 	</div>
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=62072052" charset="UTF-8"></script>
+
 </body>
 </html>

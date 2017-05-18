@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
+﻿<%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <%
 	String path = request.getContextPath();
@@ -51,8 +51,9 @@ body, html {
 						</div>
 						<div class="weui_cell_bd weui_cell_primary">
 							<input class="weui_input" type="text" name="sousuoxinxi"
-								placeholder="">
+								placeholder="请在此输入企业名称">
 						</div>
+						
 						<div class="weui_cell_ft">
 							<i class="weui_icon_warn"></i>
 						</div>
@@ -60,7 +61,7 @@ body, html {
 					
 				</div>
 			</div>
-			<div class="weui_btn_area">
+			<div class="weui_btn_area" style="margin-top:40px;">
 				<button id="showTooltips" name="Button1" value="" type="submit"
 					onclick="return check(this.form)" class="weui_btn weui_btn_primary">搜索</button>
 			</div>
@@ -73,5 +74,7 @@ body, html {
 
 		</div>
 	</div>
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=62072052" charset="UTF-8"></script>
 
+</body>
 	</html>

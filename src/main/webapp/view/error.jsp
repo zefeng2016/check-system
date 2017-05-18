@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%  
     String path = request.getContextPath();  
@@ -47,5 +47,7 @@
 			<a href="">©招生就业办</a>
 		</div>
 	</div>
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=62072052" charset="UTF-8"></script>
+
 </body>
 </html>

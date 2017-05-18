@@ -22,9 +22,6 @@ public class GetStulogin extends HttpServlet {
 		this.linkjsonString = link.getDepartClazzLink();
 	}
 	
-	
-	
-	
 	/**
 	 * 获取学生登录界面. <br>
 	 *

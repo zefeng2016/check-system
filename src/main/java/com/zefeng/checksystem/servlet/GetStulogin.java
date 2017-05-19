@@ -3,6 +3,7 @@ package com.zefeng.checksystem.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -11,17 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.zefeng.checksystem.common.DepartClazzLink;
 
 public class GetStulogin extends HttpServlet {
-	
-	String linkjsonString =null;
-	
-	/**
-	 * 初始化系部班级数据
-	 */
-	public void init() throws ServletException{
-		DepartClazzLink link = new DepartClazzLink();
-		this.linkjsonString = link.getDepartClazzLink();
-	}
-	
+
 	/**
 	 * 获取学生登录界面. <br>
 	 *
@@ -34,8 +25,10 @@ public class GetStulogin extends HttpServlet {
 	 */
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
-		if(this.linkjsonString!=null){
+		//DepartClazzLink link = new DepartClazzLink();
+		//String linkjsonString = link.getDepartClazzLink();
+		String linkjsonString=getDepartClazzLink();
+		if(linkjsonString!=null){
 			request.setAttribute("DcJSON",linkjsonString);
 	        request.getRequestDispatcher("/view/stulogin.jsp").forward(request,response);
 		}else {
@@ -43,6 +36,30 @@ public class GetStulogin extends HttpServlet {
 			out.println("error");
 		}
 		
+	}
+	
+	/**
+	 * 获取系部班级json
+	 * @return
+	 */
+	protected String getDepartClazzLink(){
+		String linkjsonString=null;
+		ServletContext application = getServletContext();
+		if(application.getAttribute("DepartClazz")==null){
+			initDepartClazzLink();
+		}
+		linkjsonString=application.getAttribute("DepartClazz").toString();		
+		return linkjsonString;
+	}
+	
+	/**
+	 * 初始化Application对象	
+	 */
+	private void initDepartClazzLink(){
+		ServletContext application = getServletContext();
+		DepartClazzLink link = new DepartClazzLink();
+		String linkjsonString = link.getDepartClazzLink();
+		application.setAttribute("DepartClazz", linkjsonString);		
 	}
 
 	/**

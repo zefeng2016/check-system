@@ -1,8 +1,10 @@
 package com.zefeng.checksystem.servlet;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -29,7 +31,8 @@ public class GetIndex extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		List<TdUser> user = TdJdbc.selectAllUser(); 
+		//List<TdUser> user = TdJdbc.selectAllUser(); 
+		List<TdUser> user=getAllTd();
 		PrintConsole.Print("正在获取企业数据");
 		if (user!=null) {
 			request.setCharacterEncoding("utf-8");
@@ -46,6 +49,26 @@ public class GetIndex extends HttpServlet {
 		        request.getRequestDispatcher("/view/error.jsp").forward(request,response);
 		        PrintConsole.Print("获取企业数据失败");
 			}
+	}
+	
+	/**
+	 * 初始化application
+	 */
+	public void initApplication() {
+		ServletContext application = getServletContext();
+		List<TdUser> user = TdJdbc.selectAllUser();
+		application.setAttribute("tduser", user);			
+	}
+	
+	/**
+	 *  * 
+	 * @return
+	 */
+	public List<TdUser> getAllTd(){		
+		if (getServletContext().getAttribute("tduser") == null) {
+			initApplication();
+		}
+		return (List<TdUser>) getServletContext().getAttribute("tduser");	
 	}
 
 	/**

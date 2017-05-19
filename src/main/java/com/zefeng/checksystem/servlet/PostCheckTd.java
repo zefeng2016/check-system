@@ -2,7 +2,9 @@ package com.zefeng.checksystem.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -48,7 +50,8 @@ public class PostCheckTd extends HttpServlet {
 
 
 		int id = Integer.parseInt(request.getParameter("id"), 10);
-		TdUser user = TdJdbc.selectUserById(id);
+		TdUser user=getTdUser(id);
+		//TdUser user = TdJdbc.selectUserById(id);
 		PrintConsole.Print("正在获取企业简介");
 		if (user != null) {
 			request.setCharacterEncoding("utf-8");
@@ -83,6 +86,33 @@ public class PostCheckTd extends HttpServlet {
 			throws ServletException, IOException {
 
 		doGet(request, response);
+	}
+	
+	/**
+	 *  初始化application
+	 */
+	public void initApplication() {
+		ServletContext application = getServletContext();
+		List<TdUser> user = TdJdbc.selectAllUser();
+		application.setAttribute("tduser", user);
+	}
+	
+	/**
+	 * 
+	 * @param id
+	 * @return
+	 */
+	public TdUser getTdUser(int id){
+		TdUser user=null;
+		if (getServletContext().getAttribute("tduser") == null) {
+			initApplication();
+		}
+		List<TdUser> allusers = (List<TdUser>) getServletContext().getAttribute("tduser");
+		for (TdUser tdUser : allusers) {
+			if(tdUser.getId().equals(id))
+				user=tdUser;
+		}
+		return user;
 	}
 
 	/**

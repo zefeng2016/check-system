@@ -13,7 +13,7 @@ public class DepartClazzLink {
 	public  String getDepartClazzLink(){
 		try {
 			for (Department department : departments) {
-				List<Clazz> childs = new ArrayList<>();
+				List<Clazz> childs = new ArrayList<Clazz>();
 				for (int i = 0; i < classes.size(); i++) {
 					Clazz temp = classes.get(i);
 					if (department.getId().equals(temp.getPid())) {

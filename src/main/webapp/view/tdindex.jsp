@@ -70,7 +70,7 @@
 							<div class="left clearfix">
 								<a href="#"><span>${postlist.postname}</span> </a>
 							</div>
-							<div class="right time">${postlist.postno}</div>
+							<!-- <div class="right time">${postlist.postno}</div>-->
 						</div>
 						<div class="bottom clearfix">
 							<div class="left" style="height: 40px;">

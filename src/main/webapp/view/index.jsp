@@ -68,7 +68,7 @@
 						</div>
 						<div class="clearfix">
 							<em><img src="<%=basePath%>view/img/ic2.png" width="21">
-							</em><span>签到状态：${user.introduce}</span>
+							</em><span>签到状态：${user.tdcheck }</span>
 						</div>
 						<div class="clearfix">
 							<em><img src="<%=basePath%>view/img/ic8.png" width="21">
@@ -76,7 +76,7 @@
 						</div>
 						<div class="clearfix">
 							<em><img src="<%=basePath%>view/img/ic3.png" width="21">
-							</em><span>公司简介：${user.tdcheck }...</span>
+							</em><span>公司简介：${user.introduce}...</span>
 						</div>
 					</div>
 				</c:forEach>
